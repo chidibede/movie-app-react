@@ -1,10 +1,26 @@
 import React from 'react';
-import requests from './utils/requests'
+import './App.css'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Genres from './components/pages/Genres'
+import Navbar from './components/Navbar/Navbar'
+import About from './components/pages/About'
+import Login from './components/pages/Login'
+import Home from './components/pages/Home'
+
 
 const App = () => {
     return (
         <div>
-            <h1>hello</h1>
+            <Router>
+                <Navbar />
+                <Switch>
+                    <Route path="/" exact component={Home}></Route>
+                    <Route path="/genres" component={Genres}></Route>
+                    <Route path="/about" component={About}></Route>
+                    <Route path="/login" component={Login}></Route>
+                </Switch>
+            </Router>
+
         </div>
     )
 }
