@@ -3,7 +3,7 @@ import axios from '../../utils/axios'
 import { Div } from './RowStyles'
 
 
-const Row = ({ title, fetchUrl }) => {
+const Row = ({ title, fetchUrl, isLargeRow }) => {
     const baseImageUrl = 'https://image.tmdb.org/t/p/original'
     const [movies, setMovies] = useState([])
 
@@ -24,7 +24,13 @@ const Row = ({ title, fetchUrl }) => {
             <div className="imageRow">
                 {movies.map((movie) => {
                     return (
-                        <img className="image" key={movie.id} src={`${baseImageUrl}/${movie.poster_path}`} alt={movie.name} />
+                        <img
+                            className={`image ${isLargeRow && "imageLarge"}`}
+                            key={movie.id}
+                            src={isLargeRow ? `${baseImageUrl}/${movie.poster_path}` : `${baseImageUrl}/${movie.backdrop_path}`}
+                            alt={movie.name}
+                        />
+
                     )
                 })}
             </div>

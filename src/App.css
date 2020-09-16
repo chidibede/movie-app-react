@@ -2,5 +2,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* background-color: #171e26; */
+}
+
+body {
   background-color: #171e26;
 }
