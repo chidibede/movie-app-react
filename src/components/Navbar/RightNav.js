@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 const Ul = styled.ul`
         display: flex;
-        justify-content: space-evenly;
         list-style: none;
         flex-flow: row nowrap;
         border-left: 1px thin white;
@@ -27,8 +26,8 @@ const Ul = styled.ul`
             position: fixed;
             right: 0;
             top: 0;
-            height: 40vh;
-            width: 250px;
+            height: 300vh;
+            width: 300px;
             transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
             transition: all 0.3s ease-in-out;
 
