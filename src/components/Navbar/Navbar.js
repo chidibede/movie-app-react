@@ -11,6 +11,7 @@ const Nav = styled.nav`
     align-items: center;
     text-decoration: none;
     border-bottom: 0.5px solid white;
+    margin-bottom:0;
 
     .brand{
        padding-left: 12px;

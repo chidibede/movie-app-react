@@ -8,6 +8,8 @@ const Ul = styled.ul`
         flex-flow: row nowrap;
         border-left: 1px thin white;
         border-bottom: 1px thin white;
+        background-color: #171e26;
+        opacity: 0.8;
 
         li{
             text-decoration: none;

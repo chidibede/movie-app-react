@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const BannerDiv = styled.div`
-    color: #aaadab;
-    margin-bottom: 10px;
+    color: whitesmoke;
+    margin-bottom: 2px;
     padding-bottom: 10px;
+    
 
     .banner_contents{
         margin-top: 20px;
@@ -36,6 +37,16 @@ export const BannerDiv = styled.div`
             transition: all 0.3s ease;
             color: lightgrey;
         }
+    }
+
+    .banner_fade{
+        height: 7.3rem;
+        background-image: linear-gradient(
+            180deg,
+            transparent,
+            rgba(37, 37, 37, 0.61),
+            #171e26
+        );
     }
 
 

@@ -3,6 +3,9 @@ import styled from 'styled-components'
 export const Div = styled.div`
     color: white;
 
+    .row_title{
+        margin-top: 0;
+    }
 
     .imageRow{
         display: flex;
@@ -18,7 +21,7 @@ export const Div = styled.div`
         object-fit: contain;
         width: 100%;
         max-height: 100px;
-        margin-top: 10px;
+        margin-top: 5px;
         margin-bottom: 10px;
         margin-right: 8px;
         padding: 4px;

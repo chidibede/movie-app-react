@@ -5,7 +5,7 @@ import Banner from '../Banner/Banner'
 import Row from '../Row/Row'
 
 const Div = styled.div`
-    padding: 10px;
+    padding: 5px;
 `
 const Home = () => {
     return (
