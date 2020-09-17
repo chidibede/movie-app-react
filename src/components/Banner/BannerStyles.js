@@ -40,6 +40,7 @@ export const BannerDiv = styled.div`
     }
 
     .banner_fade{
+        margin-top: 73px;
         height: 7.3rem;
         background-image: linear-gradient(
             180deg,
@@ -49,5 +50,12 @@ export const BannerDiv = styled.div`
         );
     }
 
+    @media screen and (max-width: 720px){
+        .banner_contents{
+        margin-top: 10px;
+        width: 100%;
+        padding: 20px;
+    }
+    }
 
 `

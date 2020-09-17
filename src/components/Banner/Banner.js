@@ -42,6 +42,12 @@ const Banner = ({ fetchUrl }) => {
         }
     }
 
+    const closeMovie = (movie) => {
+        if (trailerUrl) {
+            setTrailerUrl("")
+        }
+    }
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -64,7 +70,7 @@ const Banner = ({ fetchUrl }) => {
             backgroundImage: `url(${baseImageUrl}${movie?.backdrop_path})`,
             backgroundPosition: "center center"
         }}
-            onClick={() => handleClick(movie)}
+            onClick={() => closeMovie(movie)}
         >
             {trailerUrl && <Youtube videoId={trailerUrl} opts={opts} />}
             <ToastContainer
@@ -81,13 +87,11 @@ const Banner = ({ fetchUrl }) => {
 
             <div className="banner_contents">
                 <h2 className="banner_title">{movie?.title || movie?.name || movie?.original_name}</h2>
-                <p>{truncateString(movie?.overview, 300)}</p>
+                <p>{truncateString(movie?.overview, 200)}</p>
                 <span>
                     <button className="banner_buttons" onClick={() => handleClick(movie)}>Play Trailer</button>
                     <button className="banner_buttons">Details</button>
                 </span>
-
-
             </div>
             <div className="banner_fade"></div>
         </BannerDiv>
